@@ -1,0 +1,10 @@
+<function>
+<name>MyFunc</name>
+<const>
+<name>g</name>
+<value>9.8</value>
+</const>
+<param>t</param>
+<param>v</param>
+<body>Abs[v-g*t]</body>
+</function>

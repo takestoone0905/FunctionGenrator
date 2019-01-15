@@ -1,0 +1,7 @@
+C:\Users\Shuto\Documents\Visual Studio 2017\Projects\FunctionGenerator\FunctionGenerator\obj\Debug\FunctionGenerator.csprojAssemblyReference.cache
+C:\Users\Shuto\Documents\Visual Studio 2017\Projects\FunctionGenerator\FunctionGenerator\obj\Debug\FunctionGenerator.csproj.CoreCompileInputs.cache
+C:\Users\Shuto\Documents\Visual Studio 2017\Projects\FunctionGenerator\FunctionGenerator\bin\Debug\FunctionGenerator.exe.config
+C:\Users\Shuto\Documents\Visual Studio 2017\Projects\FunctionGenerator\FunctionGenerator\bin\Debug\FunctionGenerator.exe
+C:\Users\Shuto\Documents\Visual Studio 2017\Projects\FunctionGenerator\FunctionGenerator\bin\Debug\FunctionGenerator.pdb
+C:\Users\Shuto\Documents\Visual Studio 2017\Projects\FunctionGenerator\FunctionGenerator\obj\Debug\FunctionGenerator.exe
+C:\Users\Shuto\Documents\Visual Studio 2017\Projects\FunctionGenerator\FunctionGenerator\obj\Debug\FunctionGenerator.pdb
