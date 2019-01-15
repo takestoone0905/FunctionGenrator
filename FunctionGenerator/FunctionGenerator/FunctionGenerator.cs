@@ -1,9 +1,6 @@
 ﻿using System;
 
 namespace FunctionGenerator {
-    /// <summary>
-    /// 矢面に立つクラス。実装は隠蔽する。
-    /// </summary>
     public class FunctionGenerator {
         static void Main() {
             Test();
