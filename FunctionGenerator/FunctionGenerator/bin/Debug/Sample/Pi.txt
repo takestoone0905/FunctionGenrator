@@ -1,0 +1,6 @@
+<function>
+<name>PiFunc</name>
+<param>x</param>
+<counter>i</counter>
+<body>Pi[i,1,5,i]</body>
+</function>

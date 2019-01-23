@@ -1,0 +1,12 @@
+<function>
+<name>MySum</name>
+<dependences>
+<dependence>
+<path>./Sample/double.txt</path>
+<type>1</type>
+</dependence>
+</dependences>
+<param>x</param>
+<param>y</param>
+<body>x+y+double[x]</body>
+</function>
