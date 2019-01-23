@@ -26,7 +26,21 @@ namespace FunctionGenerator {
                     }
                 }
             } catch {
-                throw new Exception("組み込み関数の読み込みに失敗しました。function.txtが存在することを確認してください。");
+                Console.WriteLine("functions.txtが見つかりませんでした。組み込み関数を読み込んでいます。");
+                var Methods = typeof(Math).GetMethods();
+                using (StreamWriter SW = new StreamWriter("functions.txt")) {
+                    foreach (var item in Methods.Where(x => x.IsStatic)) {
+                        SW.WriteLine(item.Name);
+                    }
+                }
+                Functions = new List<string>();
+                using (StreamReader SR = new StreamReader("functions.txt")) {
+                    string name = SR.ReadLine();
+                    while (!string.IsNullOrEmpty(name)) {
+                        Functions.Add(name);
+                        name = SR.ReadLine();
+                    }
+                }
             }
         }
 
