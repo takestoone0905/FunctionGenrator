@@ -1,6 +1,0 @@
-<function>
-<name>ParenFunc</name>
-<param>x</param>
-<param>y</param>
-<body>x*(y+2*(1+3))</body>
-</function>
