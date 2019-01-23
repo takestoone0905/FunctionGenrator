@@ -1,6 +1,0 @@
-<function>
-<name>SigmaFunc</name>
-<param>x</param>
-<counter>i</counter>
-<body>Sum[i,0,x,x*i]</body>
-</function>
