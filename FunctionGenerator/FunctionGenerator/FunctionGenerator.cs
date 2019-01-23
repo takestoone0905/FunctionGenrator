@@ -55,7 +55,7 @@ namespace FunctionGenerator {
 
         #region Test
         static void Test() {
-            var f = GenerateFunc<Func<double, double, double>>("test.txt");
+            var f = GenerateFunc<Func<double, double, double>>("Sample/test.txt");
             if (f != null) {
                 Console.WriteLine(f(10, 5));
             } else {
@@ -63,7 +63,7 @@ namespace FunctionGenerator {
             }
         }
         static void Test_dependences() {
-            var f = GenerateFunc<Func<double, double, double>>("MySum.txt");
+            var f = GenerateFunc<Func<double, double, double>>("Sample/MySum.txt");
             if (f != null) {
                 Console.WriteLine(f(10, 5));
             } else {
@@ -71,7 +71,7 @@ namespace FunctionGenerator {
             }
         }
         static void Test_sigma() {
-            var f = GenerateFunc<Func<double, double>>("Sigma.txt");
+            var f = GenerateFunc<Func<double, double>>("Sample/Sigma.txt");
             if (f != null) {
                 Console.WriteLine(f(3));
             } else {
@@ -79,7 +79,7 @@ namespace FunctionGenerator {
             }
         }
         static void Test_pi() {
-            var f = GenerateFunc<Func<double, double>>("Pi.txt");
+            var f = GenerateFunc<Func<double, double>>("Sample/Pi.txt");
             if (f != null) {
                 Console.WriteLine(f(3));
             } else {
@@ -87,7 +87,7 @@ namespace FunctionGenerator {
             }
         }
         static void Test_paren() {
-            var f = GenerateFunc<Func<double, double, double>>("Paren.txt");
+            var f = GenerateFunc<Func<double, double, double>>("Sample/Paren.txt");
             if (f != null) {
                 Console.WriteLine(f(3, 1));
             } else {
