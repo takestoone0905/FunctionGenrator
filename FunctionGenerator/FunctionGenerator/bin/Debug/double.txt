@@ -1,5 +1,0 @@
-<function>
-<name>double</name>
-<param>x</param>
-<body>2*x</body>
-</function>
