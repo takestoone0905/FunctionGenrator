@@ -57,6 +57,7 @@ This sample generates a delegate which calculate velocity from initial velocity 
 
 使い方
 1.　文字列からデリケートを生成する
+
 　    FunctionGenerator.GenerateFunc(string[] Constants, string definition)という静的メソッドを使います。
    Constantsは“pi=3.14”などの、定数名とその値を表現する等式の配列です。ここに書いた定数名は、右辺値で置換されます。
    第二引数は “func(r)=pi*r^2”という数学で見るような形式で書かれます。この場合はFunc<double,double>型のデリケートが生成されます。
@@ -65,6 +66,7 @@ This sample generates a delegate which calculate velocity from initial velocity 
    なお、関数定義の中に他の関数を書くときは、”関数名[引数リスト]” という記法で書かなければなりません。
 
 2. ファイルからデリケートを生成する
+
    “FunctionGenerator.GenerateFunc(string FilePath)"を使えば、指定したPathのファイルをParseしてデリケートを生成できます。下に例を示します。
    
 ![sample2](https://user-images.githubusercontent.com/46702789/51845302-a728ab80-235a-11e9-84ab-f19600a41808.PNG)
