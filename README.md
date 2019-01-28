@@ -56,6 +56,7 @@ This sample generates a delegate which calculate velocity from initial velocity 
 　ファイルを全部プロジェクトに突っ込めば、とりあえず動きます。
 
 使い方
+
 1.　文字列からデリケートを生成する
 
 　    FunctionGenerator.GenerateFunc(string[] Constants, string definition)という静的メソッドを使います。
