@@ -33,9 +33,11 @@ Usage:
 
 Built-in Function:
   ・Numerical functions defined in System.Math class are built-in. (ex: f(x) = Abs[x]+5)
+  
   ・Combination is available(ex: f(x,n,r) =x+C[n,r] )
-  ・Σ, Π is registered as Sum and Pi.
-    Ex. ∑_(i=0)^10▒〖(x\*i+5)〗 is written as Sum[i,0,10,x\*i+5]
+ 
+ ・Σ, Π is registered as Sum and Pi.
+     Ex. ∑_(i=0)^10▒〖(x\*i+5)〗 is written as Sum[i,0,10,x\*i+5]
   This “i” can be used without declaration such as constants need. However, in input file, counter parameter have to be written with <counter> tag. (ex. <counter> i </counter>)
 
 Sample
@@ -68,7 +70,9 @@ Func<double,double>型のデリケートが生成されます。
 
 組み込みの関数:
   ・System.Mathクラスに定義されている関数が利用できます。例: f(x) = Abs[x]+5
+  
   ・組み合わせを表すC[n,r]が使えます。例: f(x,n,r) =x+C[n,r] 
+  
   ・Σ, ΠはそれぞれSum、Piという名前の関数になっています。
     例. ∑_(i=0)^10▒〖(x\*i+5)〗 は、Sum[i,0,10,x\*i+5]　という文字列に相当します。
   ここでの “i” は定数とは異なり、宣言することなく使えます。しかし、ファイルからの入力でデリケートを生成する場合、<counter> タグでカウンタ変数を宣言する必要があります（ <counter> i </counter>　など）。
