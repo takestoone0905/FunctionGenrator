@@ -6,6 +6,7 @@ using System.Linq.Expressions;
 
 namespace FunctionGenerator {
     //Reflectionを利用して名前だけでExpressionBuilderの関数を呼び出す。
+    //Reflectionを利用して名前だけでExpressionBuilderの関数を呼び出す。
     internal class ExpressionCaller {
         internal static Dictionary<string, LambdaExpression> UserDefinedFunctions = new Dictionary<string, LambdaExpression>();
         internal static Expression MethodExpression(string FuncName, params Expression[] operands) {

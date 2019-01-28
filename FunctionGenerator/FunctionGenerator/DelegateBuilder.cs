@@ -58,6 +58,7 @@ namespace FunctionGenerator {
                             return ConvertSumFunction(function);
                         case "Pi"://Π式への対応をする。
                             return ConvertPiFunction(function);
+                        case "C":
                         default:
                             return ConvertFunction(function);
                     }
@@ -184,7 +185,7 @@ namespace FunctionGenerator {
                     break;
             }
             throw new Exception("Πのコンパイルに失敗しました。");
-        }
+        }        
         //関数に含まれる変数をすべてリストアップする。
         static void getParametersInFunc(FunctionNode function, List<ParameterExpression> Paras, List<ParameterExpression> ParasWithoutCounter) {
             //最後の子ノード[Body]は別途数える

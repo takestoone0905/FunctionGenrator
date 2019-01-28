@@ -2,14 +2,14 @@
 
 namespace FunctionGenerator {
     public class FunctionGenerator {
+        /*
         static void Main() {
-            Test();
-            Test_paren();
-            Test_sigma();
-            Test_pi();
-            Test_dependences();
-            Test_helper();
+            var func = FunctionGenerator.GenerateFunc<Func<double, double, double>>(
+                new string[] { "g=9.8" },
+                "func(v,t)=v-g*t");
+            Console.WriteLine(func(1.0d, 2.0d));//Output:-18.6
         }
+        */
         public static TDelegate GenerateFunc<TDelegate>(string FilePath) where TDelegate : Delegate {
             try {
                 Function function = Function.BuildFromXML(FilePath);
@@ -53,7 +53,7 @@ namespace FunctionGenerator {
             }
         }
 
-        #region Test
+        #region Test Samples 
         static void Test() {
             var f = GenerateFunc<Func<double, double, double>>("Sample/test.txt");
             if (f != null) {
@@ -64,6 +64,14 @@ namespace FunctionGenerator {
         }
         static void Test_dependences() {
             var f = GenerateFunc<Func<double, double, double>>("Sample/MySum.txt");
+            if (f != null) {
+                Console.WriteLine(f(10, 5));
+            } else {
+                Console.WriteLine("Try Again!");
+            }
+        }
+        static void Test_Combination() {
+            var f = GenerateFunc<Func<double, double, double>>(new string[] { },"f(n,r)=C[n,r]");
             if (f != null) {
                 Console.WriteLine(f(10, 5));
             } else {

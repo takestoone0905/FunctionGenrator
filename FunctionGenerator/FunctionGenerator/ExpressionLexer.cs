@@ -29,9 +29,10 @@ namespace FunctionGenerator {
                 Console.WriteLine("functions.txtが見つかりませんでした。組み込み関数を読み込んでいます。");
                 var Methods = typeof(Math).GetMethods();
                 using (StreamWriter SW = new StreamWriter("functions.txt")) {
-                    foreach (var item in Methods.Where(x => x.IsStatic)) {
+                    foreach (var item in Methods.Where(x => x.IsStatic).Distinct()) {
                         SW.WriteLine(item.Name);
                     }
+                    SW.WriteLine("Combination");
                 }
                 Functions = new List<string>();
                 using (StreamReader SR = new StreamReader("functions.txt")) {
@@ -417,6 +418,11 @@ namespace FunctionGenerator {
                         return SearchSigma(input, constantList, parameterList, counterList);
                     case "Pi":
                         return SearchPi(input, constantList, parameterList, counterList);
+                    case "C"://COmbinationのAlias
+                        name = "Combination";
+                        input = name + input.Substring(from);
+                        from = input.IndexOf('[');
+                        break;
                     default:
                         break;
                 }
