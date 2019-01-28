@@ -32,6 +32,7 @@ Usage:
  
 
 Built-in Function:
+
   ・Numerical functions defined in System.Math class are built-in. (ex: f(x) = Abs[x]+5)
   
   ・Combination is available(ex: f(x,n,r) =x+C[n,r] )
@@ -56,11 +57,11 @@ This sample generates a delegate which calculate velocity from initial velocity 
 
 使い方
 1.　文字列からデリケートを生成する
-　    FunctionGenerator.GenerateFunc(string[] Constants, string definition)という静的メソッドを使います。Constantsは“pi=3.14”などの、
-   定数名とその値を表現する等式の配列です。ここに書いた定数名は、右辺値で置換されます。
+　    FunctionGenerator.GenerateFunc(string[] Constants, string definition)という静的メソッドを使います。
+   Constantsは“pi=3.14”などの、定数名とその値を表現する等式の配列です。ここに書いた定数名は、右辺値で置換されます。
    第二引数は “func(r)=pi*r^2”という数学で見るような形式で書かれます。この場合はFunc<double,double>型のデリケートが生成されます。
-     一度生成した関数は名前が登録されます。この場合はfuncという名前で、参照できるようになります。例えば、funcを使って計算するfunc2を次のように書き表
-   すことができます。“func2(r, θ) = func[r]*(θ/360)” 。
+     一度生成した関数は名前が登録されます。この場合はfuncという名前で、参照できるようになります。
+   例えば、funcを使って計算するfunc2を次のように書き表すことができます。“func2(r, θ) = func[r]*(θ/360)” 。
    なお、関数定義の中に他の関数を書くときは、”関数名[引数リスト]” という記法で書かなければなりません。
 
 2. ファイルからデリケートを生成する
@@ -71,6 +72,7 @@ This sample generates a delegate which calculate velocity from initial velocity 
  この例では、“a=1.0”なる定数1つと、xとyという2つの変数が定義されています。さらに、依存ファイルにdouble.txtというファイルを指定しています。<path> タグでそのファイルへのパスを、<Type>タグではその依存ファイル内で定義された関数の引数の数を指定します。<dependence>タグをParserが見つけると、そのファイルを先にParseし、内部で宣言された関数を登録します。
 
 組み込みの関数:
+
   ・System.Mathクラスに定義されている関数が利用できます。例: f(x) = Abs[x]+5
   
   ・組み合わせを表すC[n,r]が使えます。例: f(x,n,r) =x+C[n,r] 
