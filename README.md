@@ -26,22 +26,7 @@ Usage:
 2. Generate a delegate from Files
     Use the method “FunctionGenerator.GenerateFunc(string FilePath)". This overload parse a file with a certain format like Xml and Generate a delegate.Now, Let me show you an example.
 
-<function>
-<name>MySum</name>
-<dependences>
-<dependence>
-<path>./Sample/double.txt</path>
-<type>1</type>
-</dependence>
-</dependences>
-<const>
-<name>a</name>
-<value>1.0</value>
-</const>
-<param>x</param>
-<param>y</param>
-<body>x+y+double[x]</body>
-</function>
+![sample2](https://user-images.githubusercontent.com/46702789/51845302-a728ab80-235a-11e9-84ab-f19600a41808.PNG)
 
  This example contains one constant “a=1.0” and two parameters, x and y. What is more, this example uses a function “double”. It is indicated by <path> to a file which defines the function, and <Type> which indicates how many parameters “double” takes. When the parser find <dependence>, program parse the file and register the function.
  
@@ -50,7 +35,7 @@ Built-in Function:
   ・Numerical functions defined in System.Math class are built-in. (ex: f(x) = Abs[x]+5)
   ・Combination is available(ex: f(x,n,r) =x+C[n,r] )
   ・Σ, Π is registered as Sum and Pi.
-    Ex. ∑_(i=0)^10▒〖(x*i+5)〗 is written as Sum[i,0,10,x*i+5]
+    Ex. ∑_(i=0)^10▒〖(x\*i+5)〗 is written as Sum[i,0,10,x\*i+5]
   This “i” can be used without declaration such as constants need. However, in input file, counter parameter have to be written with <counter> tag. (ex. <counter> i </counter>)
 
 Sample
@@ -76,23 +61,8 @@ Func<double,double>型のデリケートが生成されます。
 
 2. ファイルからデリケートを生成する
    “FunctionGenerator.GenerateFunc(string FilePath)"を使えば、指定したPathのファイルをParseしてデリケートを生成できます。下に例を示します。
-
-<function>
-<name>MySum</name>
-<dependences>
-<dependence>
-<path>./Sample/double.txt</path>
-<type>1</type>
-</dependence>
-</dependences>
-<const>
-<name>a</name>
-<value>1.0</value>
-</const>
-<param>x</param>
-<param>y</param>
-<body>x+y+double[x]</body>
-</function>
+   
+![sample2](https://user-images.githubusercontent.com/46702789/51845302-a728ab80-235a-11e9-84ab-f19600a41808.PNG)
 
  この例では、“a=1.0”なる定数1つと、xとyという2つの変数が定義されています。さらに、依存ファイルにdouble.txtというファイルを指定しています。<path> タグでそのファイルへのパスを、<Type>タグではその依存ファイル内で定義された関数の引数の数を指定します。<dependence>タグをParserが見つけると、そのファイルを先にParseし、内部で宣言された関数を登録します。
 
@@ -100,7 +70,7 @@ Func<double,double>型のデリケートが生成されます。
   ・System.Mathクラスに定義されている関数が利用できます。例: f(x) = Abs[x]+5
   ・組み合わせを表すC[n,r]が使えます。例: f(x,n,r) =x+C[n,r] 
   ・Σ, ΠはそれぞれSum、Piという名前の関数になっています。
-    例. ∑_(i=0)^10▒〖(x*i+5)〗 は、Sum[i,0,10,x*i+5]　という文字列に相当します。
+    例. ∑_(i=0)^10▒〖(x\*i+5)〗 は、Sum[i,0,10,x\*i+5]　という文字列に相当します。
   ここでの “i” は定数とは異なり、宣言することなく使えます。しかし、ファイルからの入力でデリケートを生成する場合、<counter> タグでカウンタ変数を宣言する必要があります（ <counter> i </counter>　など）。
 
 サンプル
