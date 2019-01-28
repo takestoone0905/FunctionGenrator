@@ -75,6 +75,7 @@ Func<double,double>型のデリケートが生成されます。
 
 サンプル
 　このサンプルは、初速と経過時間を引数にとり、その時刻での落体の速度を計算するようなデリケートを生成します。
+ 
 ![sample](https://user-images.githubusercontent.com/46702789/51844951-dbe83300-2359-11e9-8811-5c27601b1d80.PNG)
  
 
