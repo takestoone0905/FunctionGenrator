@@ -56,6 +56,8 @@ This sample generates a delegate which calculate velocity from initial velocity 
 　ファイルを全部プロジェクトに突っ込めば、とりあえず動きます。
 
 使い方
+　以下の2つの使い方があります。
+ 
 
 1.　文字列からデリケートを生成する
 
